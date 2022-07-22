@@ -1,0 +1,20 @@
+version: '3'
+services:
+  database:
+    container_name: mssql-server
+    image: mcr.microsoft.com/mssql/server
+    volumes:
+      - db-data:/var/opt/mssql/
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - TZ=Asia/Tokyo
+      - MSSQL_SA_PASSWORD=sa@Sample!
+      - MSSQL_PID=Express
+      - MSSQL_LCID=1041
+      - MSSQL_COLLATION=Japanese_CI_AS  
+      
+volumes:
+  db-data:
+    driver: local
