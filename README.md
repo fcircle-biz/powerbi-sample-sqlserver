@@ -1,6 +1,6 @@
 # powerbi-sample-sqlserver
 
-[起動]
+[起動]  
 docker-compose up -d  
 database/init.bat  
 
